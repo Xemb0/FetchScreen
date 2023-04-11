@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FetchScreen</string>
+    <string name="imagetotext">Image_to_text</string>
 </resources>

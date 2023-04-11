@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "26100898163",
+    "firebase_url": "https://fetchscreen-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "fetchscreen",
+    "storage_bucket": "fetchscreen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26100898163:android:9c8ab5d2c7174a34e80d06",
+        "android_client_info": {
+          "package_name": "com.example.fetchscreen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26100898163-ls5o7jsjestudv4oir4miqgqcmq9he56.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2fyql7TlkFAg1fX77XqlPw1IEp3JtDZo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26100898163-ls5o7jsjestudv4oir4miqgqcmq9he56.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

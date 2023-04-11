@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#1A434D"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_430sdp" />
+    <!-- A button to store the data -->
+    <Button
+        android:id="@+id/store_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:text="Store Data"
+      android:layout_below="@id/recycler_view"
+        android:layout_margin="3dp"
+        android:onClick="onStoreButtonClick"/>
+
+    <!-- A button to clear the stored data -->
+    <Button
+        android:id="@+id/clear_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:text="Clear Data"
+        android:layout_below="@id/store_button"
+        android:layout_margin="3dp"
+        android:onClick="onStoreButtonClick"/>
+
+</RelativeLayout>
