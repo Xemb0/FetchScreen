@@ -2,6 +2,7 @@ package com.example.fetchscreen;
 
 import android.accessibilityservice.AccessibilityService;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.text.TextUtils;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
@@ -18,15 +19,25 @@ public class MyAccessibilityService extends AccessibilityService {
         traverseNode(rootNode, builder);
         String text = builder.toString().trim();
         if (!text.isEmpty()) {
+            // Convert package name to app name
+            PackageManager pm = getPackageManager();
+            String packageName = event.getPackageName().toString();
+            String appName = packageName;
+            try {
+                appName = pm.getApplicationLabel(pm.getApplicationInfo(packageName, 0)).toString();
+            } catch (PackageManager.NameNotFoundException e) {
+                e.printStackTrace();
+            }
             // Store the text data in SharedPreferences
             SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-            String packageName = event.getPackageName().toString();
             SharedPreferences.Editor editor = prefs.edit();
-            editor.putString(packageName, text);
+            editor.putString(appName, text);
             editor.apply();
 
         }
     }
+
+
 
     private void traverseNode(AccessibilityNodeInfo node, StringBuilder builder) {
         if (node.getChildCount() == 0) {

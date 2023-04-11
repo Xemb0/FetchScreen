@@ -1,31 +1,32 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:background="#1A434D"
+
     android:layout_width="match_parent"
+    android:background="#1A434D"
+
     android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_430sdp" />
+        android:layout_height="@dimen/_500sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/back_bg"
+        android:padding="@dimen/_5sdp"
+        android:layout_margin="@dimen/_10sdp"
+        android:textColor="@color/black" />
     <!-- A button to store the data -->
     <Button
         android:id="@+id/store_button"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_35sdp"
-        android:text="Store Data"
-      android:layout_below="@id/recycler_view"
-        android:layout_margin="3dp"
-        android:onClick="onStoreButtonClick"/>
-
-    <!-- A button to clear the stored data -->
-    <Button
-        android:id="@+id/clear_button"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_35sdp"
-        android:text="Clear Data"
-        android:layout_below="@id/store_button"
-        android:layout_margin="3dp"
+        android:text="Rfresh Data"
+    android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/button_bg"
         android:onClick="onStoreButtonClick"/>
 
 </RelativeLayout>

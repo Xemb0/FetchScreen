@@ -6,14 +6,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
+        android:padding="@dimen/_15sdp"
         android:id="@+id/text_view_shared_preferences"
         android:layout_width="match_parent"
+        android:textColor="@color/black"
         android:layout_height="544dp"
         android:layout_above="@id/text_view_firebase"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="24dp"
-android:textColor="@color/black"
-        android:background="#E3E3E6"
+
+
+        android:background="@drawable/bg"
+        android:shadowColor="@color/black"
+
         android:text="Data from SharedPreferences" />
 
     <TextView
@@ -23,12 +28,14 @@ android:textColor="@color/black"
         android:textSize="@dimen/_20ssp"
 android:layout_above="@id/btn_view_shared_prefs"
 android:textAlignment="center"
+
         android:fontFamily="sans-serif-black"
         android:text="GLIMPSE OF LAST VIEWD" />
 
     <Button
         android:id="@+id/btn_view_shared_prefs"
         android:layout_width="wrap_content"
+        android:background="@drawable/button_bg"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
